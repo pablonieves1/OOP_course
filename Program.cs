@@ -36,15 +36,35 @@ namespace OOP_course
 
             //bike2.DisplayInfo();
 
-            Calculator calculator = new Calculator();
+            //Calculator calculator = new Calculator();
 
-            calculator.num1 = 10;
-            calculator.num2 = 20;
+            ////Have a user input both numbers
+            //Console.WriteLine("Enter the first number:");
+            //calculator.num1 = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Enter the second number:");
+            //calculator.num2 = Convert.ToInt32(Console.ReadLine());
 
-            calculator.Add();
-            calculator.PrintResult();
+            ////Call the Add method to calculate the sum
+            //calculator.Add();
+            //calculator.PrintResult();
 
 
+            ////Trying scopes
+            //double number1;
+            //Console.WriteLine("Enter a number for local variable ");
+            //number1 = Convert.ToDouble(Console.ReadLine());
+
+            //Console.WriteLine("The local variable number is {0}", number1);
+
+            Try testScope = new Try();
+            testScope.Add();
+
+            testScope.TestScope();
+
+            //Triying to print a variable defined in another class
+            Console.WriteLine(testScope.z);
+
+            //Using the field at class level
 
         }
     }

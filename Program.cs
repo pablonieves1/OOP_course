@@ -56,15 +56,23 @@ namespace OOP_course
 
             //Console.WriteLine("The local variable number is {0}", number1);
 
-            Try testScope = new Try();
-            testScope.Add();
+            //Try testScope = new Try();
+            //testScope.Add();
 
-            testScope.TestScope();
+            //testScope.TestScope();
 
-            //Triying to print a variable defined in another class
-            Console.WriteLine(testScope.z);
+            ////Triying to print a variable defined in another class
+            //Console.WriteLine(testScope.z);
 
-            //Using the field at class level
+            ////Using the field at class level
+            ///
+
+            AccessScopeTry TryObjectScope = new AccessScopeTry();
+
+            TryObjectScope.a = 10;
+            TryObjectScope.b = 20;
+            Console.WriteLine("The sum of a + b is: {0}", TryObjectScope.a + TryObjectScope.b);
+
 
         }
     }

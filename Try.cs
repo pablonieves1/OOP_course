@@ -27,4 +27,9 @@ namespace OOP_course
             Console.WriteLine($"The sum of {this.x} + {y} is {result}");
         }
     }
+    class AccessScopeTry
+    {
+        public double a;
+        private double b;
+    }
 }

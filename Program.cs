@@ -73,17 +73,59 @@ namespace OOP_course
             //TryObjectScope.b = 20;
             //Console.WriteLine("The sum of a + b is: {0}", TryObjectScope.a + TryObjectScope.b);
 
-            MathematicalOperations mathops = new MathematicalOperations();
+            //MathematicalOperations mathops = new MathematicalOperations();
 
-            //ask user for bvalues to asign to the fields
-            Console.WriteLine("Enter the first number:");
-            double num1 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Enter the second number:");
-            double num2 = Convert.ToDouble(Console.ReadLine());
+            ////ask user for bvalues to asign to the fields
+            //Console.WriteLine("Enter the first number:");
+            //double num1 = Convert.ToDouble(Console.ReadLine());
+            //Console.WriteLine("Enter the second number:");
+            //double num2 = Convert.ToDouble(Console.ReadLine());
 
-            mathops.Multiply(num1, num2);
-            //mathops.Info(); // This method is private and cannot be accessed outside the class
+            //mathops.Multiply(num1, num2);
+            ////mathops.Info(); // This method is private and cannot be accessed outside the class
 
+
+            int option;
+            double num1Ar, num2Ar;
+            double multresult;
+
+            //Control Menu
+            Console.WriteLine("1. Sum two numbers");
+            Console.WriteLine("2. Substract two numbers");
+            Console.WriteLine("3. Multiply two numbers");
+
+            Console.WriteLine("Choose an option:");
+            option = Convert.ToInt32(Console.ReadLine());
+
+            
+
+            //Using the Mathematics class
+            Mathematics calculator1 = new Mathematics();
+
+
+            if (option == 1)
+            {
+                calculator1.Sum();
+            }
+            else if (option == 2)
+            {
+                Console.WriteLine("Give the first number:");
+                num1Ar = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine("Give the second number:");
+                num2Ar = Convert.ToDouble(Console.ReadLine());
+
+                calculator1.Subtract(num1Ar, num2Ar);
+            }
+            else if (option == 3)
+            {
+                multresult = calculator1.Multiply();
+                Console.WriteLine($"The multiplication result is: {multresult}");
+            }
+            else
+            {
+                Console.WriteLine("Invalid option. Please choose 1 or 2.");
+            }
 
 
         }

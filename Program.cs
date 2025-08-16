@@ -67,11 +67,23 @@ namespace OOP_course
             ////Using the field at class level
             ///
 
-            AccessScopeTry TryObjectScope = new AccessScopeTry();
+            //AccessScopeTry TryObjectScope = new AccessScopeTry();
 
-            TryObjectScope.a = 10;
-            TryObjectScope.b = 20;
-            Console.WriteLine("The sum of a + b is: {0}", TryObjectScope.a + TryObjectScope.b);
+            //TryObjectScope.a = 10;
+            //TryObjectScope.b = 20;
+            //Console.WriteLine("The sum of a + b is: {0}", TryObjectScope.a + TryObjectScope.b);
+
+            MathematicalOperations mathops = new MathematicalOperations();
+
+            //ask user for bvalues to asign to the fields
+            Console.WriteLine("Enter the first number:");
+            double num1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter the second number:");
+            double num2 = Convert.ToDouble(Console.ReadLine());
+
+            mathops.Multiply(num1, num2);
+            //mathops.Info(); // This method is private and cannot be accessed outside the class
+
 
 
         }
